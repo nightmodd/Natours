@@ -1,0 +1,7 @@
+@mixin fixclear {
+  &::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}

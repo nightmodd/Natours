@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "landing page for natours",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nightmodd/Natours.git"
+  },
+  "author": "nightmodd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nightmodd/Natours/issues"
+  },
+  "homepage": "https://github.com/nightmodd/Natours#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

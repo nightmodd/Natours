@@ -1,0 +1,80 @@
+.btn {
+  &:link,
+  &:visited {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    font-size: $default-font-size;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+
+    &:active {
+      transform: translateY(-2px);
+    }
+
+    &::after {
+      /*Must have content and display always  (maybe all same prop for the thing its after )*/
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border-radius: 10rem;
+      /*to be just behind the btn*/
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.3s;
+    }
+  }
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--animated {
+    animation: moveFromBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: underline;
+    padding: 5px 0;
+    font-size: $default-font-size;
+    color: $color-primary;
+    border-bottom: 1px solid $color-primary;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+    transform: translateY(0);
+  }
+}
