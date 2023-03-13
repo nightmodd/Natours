@@ -56,7 +56,7 @@
   &__picture {
     height: 24rem;
     background-size: cover;
-    background-blend-mode:soft-light;
+    background-blend-mode: soft-light;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     &--1 {
       background-image: linear-gradient(
