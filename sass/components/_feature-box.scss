@@ -6,7 +6,10 @@
   border-radius: 3px;
   box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
   transition: all 0.2s;
-  
+
+  @include respond(tablet-port) {
+    padding: 2rem;
+  }
 
   &:hover {
     transform: scale(1.2) translateY(-1.5rem);
@@ -23,5 +26,9 @@
     );
     -webkit-background-clip: text;
     margin-bottom: 1.5rem;
+
+    @include respond(tablet-port) {
+      margin-bottom: 0;
+    }
   }
 }

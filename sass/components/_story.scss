@@ -5,10 +5,20 @@
   margin: 0 auto;
   font-size: $default-font-size;
   box-shadow: 0 3rem 6rem;
-  background-color: rgba($color-white,0.6);
+  background-color: rgba($color-white, 0.6);
   border-radius: 3px;
 
   transform: skewX(-12deg);
+
+  @include respond(tablet-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
 
   &__shape {
     position: relative;
@@ -23,6 +33,10 @@
     clip-path: circle(50% at 50% 50%);
 
     transform: translateX(-2rem) skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0) translateX(-2rem);
+    }
   }
 
   &__image {
@@ -35,6 +49,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {

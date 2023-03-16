@@ -6,11 +6,29 @@
   box-sizing: inherit;
 }
 html {
-    // 1rem = 10px
+  // 1rem = 10px
   font-size: 62.5%;
+
+  @include respond(tablet-landscape) {
+    //1200px
+    font-size: 56.25%; //1rem = 9px
+  }
+  @include respond(tablet-port) {
+    //900px
+    font-size: 50%; //1rem = 8px
+  }
+
+  @include respond(desktop) {
+    //1200px+
+    font-size: 75%; //1rem = 12px
+  }
 }
 
 body {
-
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tablet-port) {
+    padding: 0;
+  }
 }

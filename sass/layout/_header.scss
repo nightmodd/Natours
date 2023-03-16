@@ -10,7 +10,13 @@
     url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100vw 0, 100vw 75vh, 0 100vh);
+  clip-path: polygon(0 0, 100vw 0, 100vw 75vh, 0 95vh);
+  -webkit-clip-path: polygon(0 0, 100vw 0, 100vw 75vh, 0 95vh);
+
+  @include respond(tab-port) {
+    clip-path: polygon(0 0, 100vw 0, 0vw 80vh, 0 95vh);
+    -webkit-clip-path: polygon(0 0, 100vw 0, 0vw 80vh, 0 95vh);
+  }
 
   &__logo-box {
     position: absolute;
